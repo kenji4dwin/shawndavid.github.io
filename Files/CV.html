@@ -14,10 +14,12 @@
     }
 
     .cv {
-      max-width: 800px;
-      margin: 0 auto;
+      max-width: 900px;
+      margin: 20px auto;
       padding: 20px;
       background-color: white;
+      border-radius: 8px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
     }
 
     .profile-pic {
@@ -25,18 +27,27 @@
       height: 150px;
       border-radius: 50%;
       object-fit: cover;
+      margin-bottom: 10px;
     }
 
     .header {
       text-align: center;
     }
 
-    h1, h2 {
+    h1 {
       margin-top: 0;
     }
 
+    h2 {
+      color: #444;
+      font-size: 22px;
+      border-bottom: 2px solid #007BFF;
+      padding-bottom: 5px;
+      margin-bottom: 15px;
+    }
+
     .section {
-      margin-bottom: 20px;
+      margin-bottom: 25px;
     }
 
     .text {
@@ -46,6 +57,8 @@
 
     .columns {
       display: flex;
+      justify-content: space-between;
+      gap: 20px;
       flex-wrap: wrap;
     }
 
@@ -65,12 +78,7 @@
     ul {
       padding-left: 20px;
       margin: 0;
-    }
-
-    hr {
-      border: none;
-      border-top: 1px solid #ddd;
-      margin: 20px 0;
+      color: #555;
     }
 
     .references {
@@ -93,6 +101,25 @@
         padding: 10px;
       }
     }
+
+    @media (max-width: 768px) {
+      .columns, .references {
+        flex-direction: column;
+      }
+    }
+
+    hr {
+      border: none;
+      height: 1px;
+      background-color: #ddd;
+      margin: 20px 0;
+    }
+
+    .signature {
+      text-align: right;
+      margin-top: 30px;
+      color: #777;
+    }
   </style>
 </head>
 <body>
@@ -100,9 +127,9 @@
     <div class="header">
       <img class="profile-pic" src="pics/2.png" alt="Profile Picture">
       <h1>Shawn David S. Domingo</h1>
-      <p>Bigte, Norzagaray, Bulacan</p>
-      <p>+639638983749</p>
-      <p>shawndavid.domingo@neu.edu.ph</p>
+      <p class="text">Bigte, Norzagaray, Bulacan</p>
+      <p class="text">+639666213874</p>
+      <p class="text">shawndavid.domingo@neu.edu.ph</p>
     </div>
     <hr>
     <div class="section">
@@ -263,13 +290,13 @@
       </div>
     </div>
     <hr>
-    <div class="text">
-      <p>"I hereby certify that the above-given information is true and correct."</p>
+    <div class="signature">
+      <p style="font-size: 18px;">"I hereby certify that the above-given information is true and correct."</p>
       <br>
-      <p style="text-align: right;">
+      <p style="text-align: right; font-size: 18px;">
         Shawn David S. Domingo <br>
         1BSIT-5
-      </p>
+    </p>    
     </div>
   </div>
 </body>
